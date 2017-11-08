@@ -1,0 +1,22 @@
+{
+  "name": "juuken",
+  "version": "1.0.0",
+  "description": "Sitio web personal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaimelr/Juuken.git"
+  },
+  "author": "jaimelr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaimelr/Juuken/issues"
+  },
+  "homepage": "https://github.com/jaimelr/Juuken#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
