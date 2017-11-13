@@ -4,6 +4,20 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   height: 100%;
+  z-index: 0;
+}
+
+.section-mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 100;
+  text-align: center;
+}
+
+.rank-label-container {
+  margin-top: 10px;
 }
 
 .row {
@@ -24,7 +38,6 @@
   line-height:80%;
   height:80%;
   padding: 5px;
-
 }
 
 /*--------------------------------- Cards ------------------------------*/
@@ -119,10 +132,14 @@
     width: 80%;
   }
 
+  .section-mid {
+    top: 45%;
+  }
+
   .row {
     display: block;
     justify-content:center;
-    height:50%;
+    height: 50%;
   }
 
   .section-top {
@@ -136,5 +153,19 @@
     line-height: auto;
     height: 40%;
     padding: 5px;
+  }
+
+  .profile-header-img {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .section-mid img {
+    width: 70%;
+  }
+
+  .rank-label-container {
+    display: none;
   }
 }
