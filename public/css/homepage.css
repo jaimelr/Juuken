@@ -7,6 +7,11 @@
   z-index: 0;
 }
 
+.container-section .row p {
+  text-align: center;
+}
+
+/*--------------------------- Mid section ---------------------------*/
 .section-mid {
   position: absolute;
   top: 50%;
@@ -20,6 +25,17 @@
   margin-top: 10px;
 }
 
+.section-mid img {
+  border-style: solid;
+  border-width: thin;
+  padding: 2px;
+}
+
+.section-mid span {
+  font-size: 20px;
+}
+
+/*--------------------------- Top & bot section ---------------------------*/
 .row {
   display:flex;
   justify-content:center;
@@ -37,7 +53,11 @@
   height: 80%;
   line-height:80%;
   height:80%;
-  padding: 5px;
+  padding: 10px;
+}
+
+.row .hovereffect {
+  box-shadow: 3px 3px 3px 3px;
 }
 
 /*--------------------------------- Cards ------------------------------*/
@@ -64,7 +84,7 @@
 }
 
 .hovereffect:hover .overlay {
-  background-color: rgba(48, 152, 157, 0.4);
+  background-color: rgba(219, 196, 38, 0.5);
 }
 
 .hovereffect img {
@@ -77,8 +97,8 @@
   color: #fff;
   text-align: center;
   position: relative;
-  font-size: 17px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 2%;
   background: rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(45px);
   -ms-transform: translateY(45px);
@@ -88,9 +108,9 @@
 }
 
 .hovereffect:hover h2 {
-  -webkit-transform: translateY(5px);
-  -ms-transform: translateY(5px);
-  transform: translateY(5px);
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
   margin:0px;
 }
 
@@ -98,8 +118,7 @@
   display: inline-block;
   text-decoration: none;
   padding: 7px 14px;
-  text-transform: uppercase;
-  color: #fff;
+  color: #011627;;
   border: 1px solid #fff;
   background-color: transparent;
   opacity: 0;
@@ -110,7 +129,7 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   font-weight: normal;
-  margin: 7px;
+  margin: 15px;
 }
 
 .hovereffect:hover p.info {
@@ -132,10 +151,7 @@
     width: 80%;
   }
 
-  .section-mid {
-    top: 45%;
-  }
-
+  /*------------------------- Top and bot sections ---------------------*/
   .row {
     display: block;
     justify-content:center;
@@ -155,6 +171,15 @@
     padding: 5px;
   }
 
+  /* Section text */
+  .hovereffect h2 {
+    font-size: 20px;
+  }
+  .hovereffect p.info {
+    margin: 10px;
+  }
+
+  /*------------------------ Mid section ---------------------------*/
   .profile-header-img {
     display:flex;
     justify-content:center;
@@ -162,10 +187,21 @@
   }
 
   .section-mid img {
-    width: 70%;
+    width: 50%;
   }
 
   .rank-label-container {
     display: none;
+  }
+
+  .section-mid {
+    top: 45%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+
+  .section-mid img {
+    width: 70%;
   }
 }
