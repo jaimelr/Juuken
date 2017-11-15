@@ -1,5 +1,10 @@
 html {
+  background-image: url("../images/background4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-color: #fbfef9;
+  background-size: cover;
 }
 .navbar {
   margin-bottom: 5px;
