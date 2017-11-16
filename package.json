@@ -4,7 +4,7 @@
   "description": "Sitio web personal",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
     "angular": "^1.6.6",
     "angular-route": "^1.6.6",
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
