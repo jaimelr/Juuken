@@ -6,6 +6,13 @@ html {
   background-color: #fbfef9;
   background-size: cover;
 }
+
 .navbar {
   margin-bottom: 5px;
+}
+
+.jumbotron {
+  text-align: center;
+  color: #e3e1cd;
+  background-color: #5d5555;
 }

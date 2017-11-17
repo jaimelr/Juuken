@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="PersonalWeb">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./css/bootstrap.css">
@@ -10,70 +11,10 @@
   </head>
   <body>
 
-    <div class="container container-section">
-      <div class="row section-top">
-        <div class="section col-md-6">
-          <div class="hovereffect">
-            <img class="img-responsive" src="./images/devEx.jpg" alt="">
-            <div class="overlay">
-              <h2>DevEx</h2>
-              <p class="info">
-                Experiencias como desarrollador.
-                <a href="#">¡Vamos allá!</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="section col-md-6">
-          <div class="hovereffect">
-            <img class="img-responsive" src="./images/devsCheatSheet.jpg" alt="">
-            <div class="overlay">
-              <h2>Developers Cheat Sheet</h2>
-              <p class="info">
-                Compendio de herramientas y tutoriales muy útiles para el desarrollo de software.
-                <a href="#">Suena interesante...</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-mid">
-        <div class="profile-header-container">
-          <div class="profile-header-img">
-            <img class="img-circle img-responsive" src="./images/profile.jpg" />
-            <!-- badge -->
-            <div class="rank-label-container">
-              <span class="label label-default rank-label">Jaime Loyola</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row section-bot">
-        <div class="section col-md-6">
-          <div class="hovereffect">
-            <img class="img-responsive" src="./images/microblog.jpeg" alt="">
-            <div class="overlay">
-              <h2>Micro-blog</h2>
-              <p class="info">
-                Publicaciones al más puro estilo de Twitter (sólo que con más caracteres)
-                <a href="#">Veamos...</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="section col-md-6">
-          <div class="hovereffect">
-            <img class="img-responsive" src="./images/opinion.jpg" alt="">
-            <div class="overlay">
-              <h2>Opinión</h2>
-              <p class="info">
-                Desde política hasta clean code, conoce un poco más de mi postura sobre el mundo en general.
-                <a href="#">¿En serio?</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div ng-view> </div>
+
   </body>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="javascript/angular/app.js"></script>
 </html>
