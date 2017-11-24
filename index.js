@@ -2,6 +2,7 @@
 var express = require('express');
 var path = require('path');
 
+require('./api/db.js');
 var app = express(); // Instantiate it
 var PORT = process.env.PORT || 3000;
 
