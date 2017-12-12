@@ -35,6 +35,7 @@ app.use('/bio', bioEP);
 
 //_________________________________________________API Routes
 app.get('/api/devex', devexCtrl.getAllDevex);
+app.get('/api/devex/:id', devexCtrl.getOneDevex);
 app.post('/api/devex/new', devexCtrl.addDevex);
 
 //_________________________________________________Server configuration

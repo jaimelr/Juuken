@@ -1,7 +1,7 @@
 var Devex = require('../models/Devex.js');
 
 exports.getAllDevex = function(req, res) {
-  console.log("Get All Developer Experiences");
+  console.log("Getting All Developer Experiences");
 
   Devex.find( function(err, devexsList) {
 
@@ -13,8 +13,23 @@ exports.getAllDevex = function(req, res) {
   });
 };
 
+exports.getOneDevex = function(req, res) {
+  console.log("Getting one Developer Experience");
+
+  var id = req.params.id;
+
+  Devex.findById(id, function(err, devex) {
+
+    if(err) {
+      console.log("Ups! Something went wrong while searching on DB");
+      res.status(500).json(err.message);
+    }
+    res.status(200).json(devex);
+  });
+};
+
 exports.addDevex = function(req, res) {
-  console.log("Add Developer Experience");
+  console.log("Adding Developer Experience");
 
   var title = req.body.title;
   var image = req.body.image;
