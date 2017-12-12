@@ -6,13 +6,18 @@ var devexSchema = Schema({
     type: String,
     required: true
   },
+  image: {
+    type: String
+  },
   description: {
     type: String
   },
   review: {
     type: Number
-  }
+  },
   author: {
     type: String
   }
 });
+
+module.exports = mongoose.model('Devex', devexSchema);
