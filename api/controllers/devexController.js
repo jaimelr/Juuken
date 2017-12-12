@@ -1,5 +1,18 @@
 var Devex = require('../models/Devex.js');
 
+exports.getAllDevex = function(req, res) {
+  console.log("Get All Developer Experiences");
+
+  Devex.find( function(err, devexsList) {
+
+    if (err) {
+      console.log("Ups! Something went wrong while searching on DB");
+      res.status(500).json(err);
+    }
+    res.status(200).json(devexsList);
+  });
+};
+
 exports.addDevex = function(req, res) {
   console.log("Add Developer Experience");
 
