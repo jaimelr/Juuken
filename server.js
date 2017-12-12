@@ -1,6 +1,7 @@
 // Get express dependecy
 var express = require('express');
 
+var bodyParser = require('body-parser');
 var path = require('path');
 var indexEP = require('./routes/index');
 var devexEP = require('./routes/devex');
@@ -9,6 +10,7 @@ var microblogEP = require('./routes/microblog');
 var opinionEP = require('./routes/opinion');
 var bioEP = require('./routes/bio');
 
+var devexCtrl = require('./api/controllers/devexController');
 
 // Connection to database
 require('./api/db.js');
@@ -19,6 +21,9 @@ var app = express(); // Instantiate it
 app.use(express.static(path.join(__dirname, 'public')));
 // Serve npm dependencies to front-end
 app.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
+// Read data from POST, PUT methods.
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 //_________________________________________________Browser routes
 app.use('/', indexEP);
@@ -27,6 +32,9 @@ app.use('/devcheat', devcheatEP);
 app.use('/microblog', microblogEP);
 app.use('/opinion', opinionEP);
 app.use('/bio', bioEP);
+
+//_________________________________________________API Routes
+app.post('/api/devex/new', devexCtrl.addDevex);
 
 //_________________________________________________Server configuration
 var PORT = process.env.PORT || 3000;
