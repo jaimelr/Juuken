@@ -1,14 +1,16 @@
+<div ng-include="'partials/navbar.html'"></div>
+
 <div ng-controller="DevexController" class="container container-section">
-  <div class="row" ng-model="devexList">
+  <div class="row devex-list" ng-model="devexList">
 		<div class="col-md-5 col-lg-5">
 			<!-- Featured article -->
 			<div class="featured-article">
 				<a href="#">
-					<img src="http://placehold.it/482x350" alt="" class="thumb">
+					<img ng-src="{{ devexList[1].image }}" alt="" class="thumb featured-img img-responsive">
 				</a>
 				<div class="block-title">
 					<h2>{{ devexList[0].title }}</h2>
-					<p class="by-author"><small>By Jhon Doe</small></p>
+					<p class="by-author"><small>Por: {{ devexList[0].author }}</small></p>
 				</div>
 			</div>
 			<!-- End featured article -->
@@ -17,7 +19,7 @@
 		<div class="col-md-7 col-lg-7">
 			<ul class="media-list main-list">
         <li class="media" ng-repeat="devex in devexList">
-          <a class="pull-left" href="#">
+          <a class="pull-left" href="/devex-detail" ng-click="setDevexDetail(devex)">
             <img class="media-object" src="http://placehold.it/150x90" alt="...">
 			    </a>
 			    <div class="media-body">
