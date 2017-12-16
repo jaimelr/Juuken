@@ -28,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //_________________________________________________Browser routes
 app.use('/', indexEP);
 app.use('/devex', devexEP);
+app.use('/devex-detail', devexEP);
 app.use('/devcheat', devcheatEP);
 app.use('/microblog', microblogEP);
 app.use('/opinion', opinionEP);

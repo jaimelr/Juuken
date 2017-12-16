@@ -1,0 +1,34 @@
+<div ng-include="'partials/navbar.html'"></div>
+
+<div ng-controller="DevexDetailController" class="container container-section">
+  <div class="container col-lg-9 devex-container" ng-model="devexDetail">
+    <div class="row">
+      <img class="devex-img-header img-responsive" ng-src="{{ devexDetail.image }}" alt="Devex image header">
+    </div>
+    <div class="row">
+      <h1 class="devex-header"> {{ devexDetail.title }}</h1>
+    </div>
+    <div class="row">
+      <h4 class="devex-header">Calificación: {{ devexDetail.review }}/10</h4>
+    </div>
+    <div class="row author-row">
+      <p class="devex-header">Autor: {{ devexDetail.author }}</p>
+    </div>
+    <div class="row description-row">
+      <p>{{ devexDetail.description }}</p>
+    </div>
+  </div>
+  <div class="container col-lg-3 devex-list" ng-model="devexList">
+		<ul class="media-list main-list">
+      <li class="media" ng-repeat="devex in devexList">
+        <a class="pull-left" href="/devex-detail" ng-click="getDevexDetail(devex)">
+          <img class="media-object" src="http://placehold.it/150x90" alt="...">
+		    </a>
+		    <div class="media-body">
+		      <h4 class="media-heading devex-title">{{ devex.title }}</h4>
+		      <p class="by-author">Por: {{ devex.author }}</p>
+		    </div>
+		  </li>
+		</ul>
+  </div>
+</div>
