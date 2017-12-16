@@ -22,8 +22,8 @@ function config($locationProvider, $routeProvider) {
     .when('/devcheat', {
       templateUrl: 'templates/devcheat.html'
     })
-    .when('/microblog', {
-      templateUrl: 'templates/microblog.html'
+    .when('/logros', {
+      templateUrl: 'templates/achivements.html'
     })
     .when('/opinion', {
       templateUrl: 'templates/opinion.html'

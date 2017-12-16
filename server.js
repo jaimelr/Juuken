@@ -6,7 +6,7 @@ var path = require('path');
 var indexEP = require('./routes/index');
 var devexEP = require('./routes/devex');
 var devcheatEP = require('./routes/devcheat');
-var microblogEP = require('./routes/microblog');
+var achivementsEP = require('./routes/achivements');
 var opinionEP = require('./routes/opinion');
 var bioEP = require('./routes/bio');
 
@@ -30,7 +30,7 @@ app.use('/', indexEP);
 app.use('/devex', devexEP);
 app.use('/devex-detail', devexEP);
 app.use('/devcheat', devcheatEP);
-app.use('/microblog', microblogEP);
+app.use('/logros', achivementsEP);
 app.use('/opinion', opinionEP);
 app.use('/bio', bioEP);
 
