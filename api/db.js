@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var dbUrl = 'mongodb://localhost/personalsite'; //process.env.MONGODB_URI 
+var dbUrl = 'mongodb://localhost/personalsite' || process.env.MONGODB_URI; 
 
 mongoose.connect(dbUrl, {
   useMongoClient: true
